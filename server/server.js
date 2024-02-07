@@ -12,12 +12,9 @@ const url =
   "mongodb+srv://ojas01010:ImOjas01010@cluster0.inw4fyr.mongodb.net/?retryWrites=true&w=majority";
 
 // Database
-async function connect() {
-  const connect = await mongoose.connect(url);
-}
-connect();
-mongoose.connection.once("connected", () => {
-  console.log("connected");
+
+mongoose.connect(url).mongoose.connection.once("connected", () => {
+  console.log("connected to db");
 });
 
 // Routes
