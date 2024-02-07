@@ -13,9 +13,7 @@ const url =
 
 // Database
 
-mongoose.connect(url).mongoose.connection.once("connected", () => {
-  console.log("connected to db");
-});
+mongoose.connect(url).then(console.log("db connected"));
 
 // Routes
 app.get("/", (req, res) => {
