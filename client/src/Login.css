@@ -1,0 +1,66 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 100px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+}
+.sign-in{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 800;
+    
+}
+.text{
+    font-size: large;
+    font-weight: 800;
+    
+}
+.input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.sign-in-btn{
+    margin-top: 30px;
+    height: 30px;
+    background-color: #ffd814;
+    border: none;
+    border-radius: 5px;
+}
+.sign-in-btn:hover{
+    background-color: #f7ca00;
+    cursor:pointer;
+}
+.terms{
+    margin-top: 10px;
+}
+.newtext{
+    margin-top: 40px;
+    color: #7a7a7a;
+    font-size: small;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.create{
+    margin-top: 15px;
+    height: 30px;
+    border: 1px solid #d5d9d9;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+}
+.create:hover{
+    cursor: pointer;
+    background-color: #f7fafa;
+}
