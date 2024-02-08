@@ -8,8 +8,9 @@ const port = process.env.PORT || 9000;
 
 // middlewares
 app.use(express.json());
+app.use(cors());
 const url =
-  "mongodb+srv://ojas01010:ImOjas01010@cluster0.inw4fyr.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://ojas01010:<password>@cluster0.inw4fyr.mongodb.net/?retryWrites=true&w=majority";
 
 // Database
 
