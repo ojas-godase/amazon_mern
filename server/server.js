@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const { User } = require("./Model");
@@ -9,8 +10,7 @@ const port = process.env.PORT || 9000;
 // middlewares
 app.use(express.json());
 app.use(cors());
-const url =
-  "mongodb+srv://ojas01010:<password>@cluster0.inw4fyr.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.MY_MONGO_URL;
 
 // Database
 
