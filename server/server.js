@@ -15,6 +15,11 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
+app.use(
+  cors({
+    origin: "https://amazon-clone-hf4n.onrender.com",
+  })
+);
 const url = process.env.MY_MONGO_URL;
 
 // Database
