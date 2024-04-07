@@ -24,7 +24,7 @@ mongoose.connect(url).then(console.log("db connected"));
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Welcome to Backend!");
 });
 
 // login the user
