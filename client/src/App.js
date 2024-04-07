@@ -10,6 +10,8 @@ import Login from "./Login.js";
 import Checkout from "./Checkout.js";
 
 function App() {
+  // backend connection url
+  const backendURL = "https://amazon-mern-4a0p.onrender.com/";
   // all the products
   const [product, setProduct] = useState([
     {
@@ -106,7 +108,7 @@ function App() {
     prod.cart = true;
     if (isLoggedIn) {
       const update = await axios
-        .post("https://amazon-clone-hf4n.onrender.com/update", {
+        .post(`${backendURL}update`, {
           newCart,
           user,
         })
@@ -139,7 +141,7 @@ function App() {
     prod.cart = false;
     if (isLoggedIn) {
       await axios
-        .post("https://amazon-clone-hf4n.onrender.com/update", {
+        .post(`${backendURL}update`, {
           newCart,
           user,
         })
@@ -164,7 +166,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   async function getUser(user) {
     const check = await axios
-      .post("https://amazon-clone-hf4n.onrender.com/login", {
+      .post(`${backendURL}login`, {
         user,
       })
       .then(function (response) {
@@ -210,7 +212,7 @@ function App() {
   async function createUser(user) {
     let newUser = { ...user, cartProduct };
     const make = await axios
-      .post("https://amazon-clone-hf4n.onrender.com/create", {
+      .post(`${backendURL}create`, {
         newUser,
       })
       .then(function (response) {
