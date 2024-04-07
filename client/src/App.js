@@ -106,7 +106,7 @@ function App() {
     prod.cart = true;
     if (isLoggedIn) {
       const update = await axios
-        .post("https://amazon-clone-si5x.onrender.com/update", {
+        .post("https://amazon-clone-hf4n.onrender.com/update", {
           newCart,
           user,
         })
@@ -139,7 +139,7 @@ function App() {
     prod.cart = false;
     if (isLoggedIn) {
       await axios
-        .post("https://amazon-clone-si5x.onrender.com/update", {
+        .post("https://amazon-clone-hf4n.onrender.com/update", {
           newCart,
           user,
         })
@@ -164,7 +164,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   async function getUser(user) {
     const check = await axios
-      .post("https://amazon-clone-si5x.onrender.com/login", {
+      .post("https://amazon-clone-hf4n.onrender.com/login", {
         user,
       })
       .then(function (response) {
@@ -210,7 +210,7 @@ function App() {
   async function createUser(user) {
     let newUser = { ...user, cartProduct };
     const make = await axios
-      .post("https://amazon-clone-si5x.onrender.com/create", {
+      .post("https://amazon-clone-hf4n.onrender.com/create", {
         newUser,
       })
       .then(function (response) {
